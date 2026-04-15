@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../output.css" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="font-Inter">
+    <div class="w-screen h-screen flex">
+        <div class="w-[54vw] h-screen">
+            <img class="object-right md:object-cover w-screen h-screen" src="../aset_aset_asink/bg.jpg" alt="Makanana Enak" />
+        </div>
+        <div class="w-[46vw] h-screen flex flex-col items-center">
+            <a href="forgot_page.html" class="ml-4 mt-4 mr-auto">
+                <i class="cursor-pointer w-8 h-8" data-feather="chevron-left"></i>
+            </a>
+            <form class="w-[65%] mt-16">
+                <h1 class="text-3xl font-bold">Lupa Password</h1>
+                <div class="mt-8 mb-auto flex flex-col w-full justify-evenly gap-2">
+                    <label class="font-semibold" for="email">Masukan alamat email</label>
+                    <input autocomplete="off" autofocus
+                        class="h-9 w-full flex items-center shadow-lg border border-gray-300 rounded-md pl-4 focus:border-none focus:ring-3 focus:ring-cherry outline-none"
+                        type="email" name="email" placeholder="wahyu@gmail.com">
+                </div>
+                <br>
+                <a href="kode_verif.html">
+                    <button class="w-full h-9 cursor-pointer font-bold text-white text-center bg-cherry rounded-md shadow-sm"
+                    type="submit">Kirim</button>
+                </a>
+            </form>
+        </div>
+    </div>
+
+
+    <script>
+        feather.replace();
+    </script>
+</body>
+
+</html>

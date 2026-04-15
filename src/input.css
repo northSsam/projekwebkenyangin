@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --color-text: oklch(0.12 0.01 250);
+  --color-cherry: oklch(0.55 0.22 25);
+  --color-dark-red: #7E0F0E;
+  --color-cotton: rgba(237, 235, 221, 1);
+}

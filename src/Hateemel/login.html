@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="../output.css" rel="stylesheet" />
+  <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="font-Inter">
+  <div class="w-screen h-screen flex">
+    <div class="w-[54vw] h-screen">
+      <img class="object-right md:object-cover w-screen h-screen" src="../aset_aset_asink/bg.jpg" alt="Makanana Enak" />
+    </div>
+    <div class="w-[46vw] h-screen bg-white flex flex-col items-center">
+      <form class="w-[65%] flex flex-col mt-16 mb-auto" id="form">
+        <div class="mt-[5%]">
+          <h1 class="text-center text-3xl font-semibold self-baseline">Masuk</h1>
+          <h1 class="font-bold text-center text-sm mt-2">
+            Belum memiliki akun? <a class="text-cherry underline" href="./signup.html">Daftar</a>
+          </h1>
+        </div>
+        <a class="w-full h-fit mt-2" href="">
+          <div
+            class="w-full mt-2 pb-4 pt-4 flex items-center gap-2 self-center justify-center border bg-[#EED9B9] border-[#d53d0f1a] rounded-md h-10 shadow-md">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+              <path fill="#4285F4"
+                d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+              <path fill="#34A853"
+                d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+              <path fill="#FBBC05"
+                d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" />
+              <path fill="#EA4335"
+                d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+            </svg>
+            <h1 class="text-dark-red font-bold">Masuk dengan Google</h1>
+          </div>
+        </a>
+        <div class="flex items-center mt-2">
+          <hr class="grow border-t border-black" />
+          <span class="opacity-50 pl-2 pr-2"> Atau </span>
+          <hr class="grow border-t border-black" />
+        </div>
+        <div class="flex flex-col gap-0 h-full mt-2">
+          <label for="email" class="font-bold text-md mt-2">Alamat Email / Nama Pengguna</label>
+          <input autocomplete="off"
+            class="h-9 flex items-center shadow-md border border-gray-300 rounded-md pl-4 focus:text-black focus:outline-2 focus:outline-red-600"
+            type="email" name="email" placeholder="contoh@gmail.com" required />
+          <label class="font-bold text-md mt-2" for="password">Password</label>
+          <input autocomplete="off"
+            class="h-9 w-full flex items-center shadow-md border border-gray-300 rounded-md pl-4 focus:text-black focus:outline-2 focus:outline-red-600"
+            type="password" name="password" placeholder="********" required />
+          <a href="/src/Hateemel/welcomePage.html">
+            <button 
+            class="mt-4 w-full h-9 hover:cursor-pointer font-bold text-white text-center bg-cherry rounded-md shadow-md"
+            type="submit">
+            Masuk
+          </button>
+        </a>
+          <a href="lupa_pw.html" class="text-gray-400 text-center mt-4">Lupa Password? <span class="text-cherry underline font-semibold">Reset Password</span></a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+  <script>
+    feather.replace();
+  </script>
+</body>
+
+</html>

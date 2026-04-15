@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../output.css" rel="stylesheet" />
+    <script src="https://unpkg.com/feather-icons"></script>
+</head>
+
+<body class="font-Inter">
+    <div class="w-screen h-screen flex">
+        <div class="w-[54vw] h-screen">
+             <img class="object-right md:object-cover w-screen h-screen" src="../aset_aset_asink/bg.jpg" alt="Makanana Enak" />
+        </div>
+        <div class="w-[46vw] h-screen bg-white flex flex-col items-center">
+            <a href="lupa_pw.html" class="ml-4 mt-4 mr-auto">
+                <i class="cursor-pointer w-8 h-8" data-feather="chevron-left"></i>
+            </a>
+            <div class="mt-16">
+                <h1 class="text-center text-3xl font-bold">Verifikasi Dirimu</h1>
+                <p class="text-center text-gray-400 mt-2 mb-3">Masukan kode 4 digit yang terkirim ke wahyu@gmail.com</p>
+                <div class="mb-auto flex w-full justify-evenly gap-2" id="otp-inputs">
+                    <input type="text" maxlength="1" inputmode="numeric" autofocus
+                        class="w-20 h-20 text-center text-2xl font-bold border-2 border-gray-300 rounded-full focus:border-none focus:ring-3 focus:ring-cherry outline-none transition-all" />
+                    <input type="text" maxlength="1" inputmode="numeric"
+                        class="w-20 h-20 text-center text-2xl font-bold border-2 border-gray-300 rounded-full focus:border-none focus:ring-3 focus:ring-cherry outline-none transition-all" />
+                    <input type="text" maxlength="1" inputmode="numeric"
+                        class="w-20 h-20 text-center text-2xl font-bold border-2 border-gray-300 rounded-full focus:border-none focus:ring-3 focus:ring-cherry outline-none transition-all" />
+                    <input type="text" maxlength="1" inputmode="numeric"
+                        class="w-20 h-20 text-center text-2xl font-bold border-2 border-gray-300 rounded-full focus:border-none focus:ring-3 focus:ring-cherry outline-none transition-all" />
+                </div>
+                <button
+                    class="w-full cursor-pointer mt-4 h-9 font-bold text-white text-center bg-cherry rounded-md shadow-md">Verifikasi
+                    Kode</button>
+                <p class="text-center text-gray-400 mt-4 mb-3">Belum Mendapatkan kode? <span
+                        class="text-cherry font-semibold hover:cursor-pointer underline">Kirim ulang</span></p>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        feather.replace();
+    </script>
+    <script>
+        const container = document.getElementById('otp-inputs');
+        const inputs = container.querySelectorAll('input');
+
+        inputs.forEach((input, index) => {
+            // Pindah otomatis ke kanan saat mengetik
+            input.addEventListener('input', (e) => {
+                if (e.target.value.length === 1) {
+                    inputs[index + 1].focus();
+                }
+            });
+
+            // Pindah otomatis ke kiri ketika menekan Backspace
+            input.addEventListener('keydown', (e) => {
+                if (e.key === 'Backspace' && !e.target.value && index > 0) {
+                    inputs[index - 1].focus();
+                }
+            });
+
+            // Paste Auto FIll Input
+            input.addEventListener('paste', (e) => {
+                e.preventDefault();
+                const data = e.clipboardData.getData('text').slice(0, inputs.length);
+                const digits = data.split('');
+
+                digits.forEach((digit, i) => {
+                    if (inputs[i]) {
+                        inputs[i].value = digit;
+                    }
+                });
+
+                inputs[Math.min(digits.length, inputs.length - 1)].focus();
+            });
+        });
+    </script>
+</body>
+
+</html>
